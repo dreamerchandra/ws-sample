@@ -14,6 +14,8 @@ server.listen(8080, function () {
 wsServer = new WebSocketServer({
   httpServer: server,
   autoAcceptConnections: false,
+  // maxReceivedMessageSize: 17486050, 
+  // maxReceivedFrameSize: 17486050,
 })
 
 wsServer.on('request', function (request) {
